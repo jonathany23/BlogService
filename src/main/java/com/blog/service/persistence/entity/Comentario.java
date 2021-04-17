@@ -1,4 +1,4 @@
-package com.blog.service.entity;
+package com.blog.service.persistence.entity;
 
 import javax.persistence.*;
 
@@ -12,6 +12,30 @@ public class Comentario {
 
     @Column(name = "id_post")
     private Integer idPost;
-    
-    private Integer comentario;
+
+    private String comentario;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getIdPost() {
+        return idPost;
+    }
+
+    public void setIdPost(Integer idPost) {
+        this.idPost = idPost;
+    }
+
+    public String getComentario() {
+        return comentario;
+    }
+
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
+    }
 }
