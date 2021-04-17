@@ -1,5 +1,7 @@
 package com.blog.service.persistence.entity;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.*;
 
 @Entity
@@ -8,6 +10,7 @@ public class Comentario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @ApiModelProperty(hidden = true)
     private Integer id;
 
     @Column(name = "id_post")

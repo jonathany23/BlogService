@@ -1,6 +1,7 @@
 package com.blog.service.service;
 
 import com.blog.service.model.Post;
+import com.blog.service.persistence.entity.Comentario;
 import com.blog.service.utils.Constants;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
@@ -35,5 +36,12 @@ public class PostConsumerServiceImp implements PostConsumerService {
                                 .map(object -> mapper.convertValue(object, Post.class))
                                 .collect(Collectors.toList());
         return Optional.of(posts);
+    }
+
+    @Override
+    public Optional<Post> getPostById(int idPost) {
+        String postUrl = Constants.URL + idPost;
+        ResponseEntity<Post> post = restTemplate.getForEntity(postUrl, Post.class);
+        return Optional.of(post.getBody());
     }
 }
