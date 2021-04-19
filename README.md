@@ -1,5 +1,5 @@
 # PRUEBA TÉCNICA - BLOG 
-##Lsta de Tecnologías
+## Lista de Tecnologías
   * Java 
   * Gradle
   * Spring Boot
@@ -7,18 +7,18 @@
   * Spring Data
   * H2 - Database
   * Swagger
-##Herramientas o Plataformas
+## Herramientas o Plataformas
   * IntelliJ IDEA
   * Postman
-##Lista de Patrones de Diseño o Metodologias Aplicadas
+## Lista de Patrones de Diseño o Metodologias Aplicadas
   * Autowired Singletons
   * Factory Method Pattern
   * Template Method Pattern
 
-##Diagrama de arquitectura
+## Diagrama de arquitectura
 ![alt text](https://github.com/jonathany23/BlogService/blob/main/src/main/resources/img/diagram.png "Diagrama de arquitectura")
 
-##Documentación
+## Documentación
 Una vez desplegada la aplicación, se puede consultar la documentacion en el siguinte enlace.
 [http://(host:port)/blog/api/swagger-ui.html](http://localhost:8080/blog/api/swagger-ui.html#/blog-controller)
 
