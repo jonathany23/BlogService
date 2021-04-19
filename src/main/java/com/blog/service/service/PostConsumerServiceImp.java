@@ -1,11 +1,11 @@
 package com.blog.service.service;
 
 import com.blog.service.model.Post;
-import com.blog.service.persistence.entity.Comentario;
 import com.blog.service.utils.Constants;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -20,7 +20,10 @@ import java.util.stream.Collectors;
 public class PostConsumerServiceImp implements PostConsumerService {
 
     private static final Logger log = LoggerFactory.getLogger(PostConsumerServiceImp.class);
-    private static final ObjectMapper mapper = new ObjectMapper();
+
+    //private static final ObjectMapper mapper = new ObjectMapper();
+    @Autowired
+    private static ObjectMapper mapper;
 
     private final RestTemplate restTemplate;
 
